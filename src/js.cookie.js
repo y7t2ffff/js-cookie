@@ -47,6 +47,10 @@
 					expires.setMilliseconds(expires.getMilliseconds() + attributes.expires * 864e+5);
 					attributes.expires = expires;
 				}
+				
+				if (typeof attributes.expires === 'object') {
+				  attributes.expires = expires;
+				}
 
 				try {
 					result = JSON.stringify(value);
